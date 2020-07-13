@@ -17,10 +17,11 @@ module.exports = {
     ],
     module:{
         rules:[
-            { test: /\.(png|jpg|gif|bmp|jpeg)$/, use: 'url-loader' },
+            { test: /\.(png|jpg|gif|bmp|jpeg)$/, use: 'url-loader?limit=43960' },
             {test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader'},
             { test: /\.vue$/, use: 'vue-loader' },
             {test:/\.css$/,use:['style-loader','css-loader']},
+            { test: /\.sass$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
